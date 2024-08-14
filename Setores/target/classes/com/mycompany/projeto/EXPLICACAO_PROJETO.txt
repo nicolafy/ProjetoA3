@@ -1,0 +1,50 @@
+
+
+                          1° PARTE DO PROGRAMA
+
+O projeto apresentado é um sistema simples de gerenciamento de produtos para um mercado.
+ A ideia central do projeto é permitir a adição e listagem de produtos em diferentes setores do mercado.
+ Abaixo, vou explicar em detalhes o que cada parte do código faz e quais funcionalidades ele permite:
+
+Classe Produto:
+
+Representa um produto com três atributos: nome, preco e quantidade.
+Inclui um construtor para inicializar esses atributos.
+Sobrescreve o método toString() para fornecer uma representação textual do produto, que é útil para a listagem.
+
+Classe Mercado:
+
+Gerencia uma lista de produtos usando uma ArrayList.
+Fornece métodos para adicionar um produto (adicionarProduto) e listar todos os produtos (listarProdutos).
+O método listarProdutos verifica se a lista de produtos está vazia e, se não estiver, imprime as informações
+ de cada produto usando o método toString() da classe Produto.
+
+Classe principal NewMain:
+
+Contém o método main que executa o programa.
+Utiliza a classe Scanner para receber entradas do usuário.
+Exibe um menu interativo com três opções: escolher um setor e adicionar um produto, listar todos os produtos e 
+sair do programa. Implementa um loop para continuar exibindo o menu até que o usuário decida sair.
+                        
+
+                         2°PARTE DO PROGRAMA
+
+Nesta versão atualizada, adicionamos também "Procurar Produto"
+e "Excluir Produto" a partir da sua nomenclatura, e corrigimos alguns
+erros que estava ocorrendo na execução da versão anterior do programa. 
+Ao "Procurar Produto", é buscado através de uma instância a classe mercado,
+Pois lá está todos os produtos salvos nos arreysLists, então é mostrado,
+nome, e quantidade atual do produto.
+
+Ao "Excluir Produto" , é  mostrado através de um Switch case, duas escolhas...
+1° permite excluir todo um estoque de um produto específico.
+2° permite que o usuário decida a quantidade quer quer excluir 
+do produto escolhido.
+
+Correção de erros.
+Adicionamos cláusula try-catch ao redor do bloco de código que lê
+a entrada do usuário para capturar exceções de InputMismatchException,
+que ocorrem quando o usuário insere um tipo de entrada inválida. Também 
+adicionamos scan.next() no bloco catch para limpar o buffer do scanner e 
+evitar loops infinitos quando ocorrer uma exceção, já que a versão anterior
+estava ocorrendo muitos erros por essas causas.
